@@ -1,7 +1,31 @@
 # Starter
 
-Descrição da aplicação a ser criada nesse starter
+* Esta aplicação já tem as bibliotecas USPDev pré configuradas
+* Inicio
+```
+    git clone git@github.com:uspdev/starter sua-aplicacao
+    cd sua-aplicacao
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    php artisan migrate
+```
+* Crie seu repositório remoto e faça as seguintes configurações
+```
+    git remote remove origin
+    git remote add origin git@github.com:uspdev/sua-aplicacao
+    git branch --set-upstream-to=origin/main main
+    git push
+```
+* Utilize o readme.md como exemplo
+* Remova o que for desnecessário
+* Verifique o .env.example
 
+---
+
+# Minha Aplicação
+
+Diga o que é sua aplicação.
 ## Funcionalidades
 
 * Descreva suas funcionalidades aqui
