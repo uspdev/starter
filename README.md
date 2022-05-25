@@ -14,8 +14,7 @@
 ```
     git remote remove origin
     git remote add origin git@github.com:uspdev/sua-aplicacao
-    git branch --set-upstream-to=origin/main main
-    git push
+    git push -u origin main
 ```
 * Utilize o readme.md como exemplo
 * Remova o que for desnecessário
