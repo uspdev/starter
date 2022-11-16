@@ -11,10 +11,12 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "uspdev/laravel-tools": "^0.1.0",
-        "uspdev/laravel-usp-theme": "^2.5",
-        "uspdev/replicado": "^1.13",
-        "uspdev/senhaunica-socialite": "^4.3"
+        "spatie/commonmark-highlighter": "^3.0",
+        "uspdev/laravel-tools": "^1.1",
+        "uspdev/laravel-usp-theme": "^2.6",
+        "uspdev/replicado": "^1.15",
+        "uspdev/senhaunica-socialite": "^4.3",
+        "ybr-nx/laravel-mariadb": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

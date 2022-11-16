@@ -2,7 +2,7 @@
 
 * Esta aplicação já tem as bibliotecas USPDev pré configuradas
 * Inicio
-```
+```bash
     git clone git@github.com:uspdev/starter sua-aplicacao
     cd sua-aplicacao
     composer install
@@ -11,7 +11,7 @@
     php artisan migrate
 ```
 * Crie seu repositório remoto e faça as seguintes configurações
-```
+```bash
     git remote remove origin
     git remote add origin git@github.com:uspdev/sua-aplicacao
     git push -u origin main
@@ -54,10 +54,12 @@ Para receber as últimas atualizações do sistema rode:
 
 ### Básico
 
-    git clone git@github.com:uspdev/chamados
-    composer install
-    cp .env.example .env
-    php artisan key:generate
+```bash
+git clone git@github.com:uspdev/chamados
+composer install
+cp .env.example .env
+php artisan key:generate
+```
 
 Configure o .env conforme a necessidade
 
@@ -65,12 +67,14 @@ Configure o .env conforme a necessidade
 
 Algumas partes podem usar cache ([https://github.com/uspdev/cache](https://github.com/uspdev/cache)). Para utilizá-lo você precisa instalar e configurar o memcached no mesmo servidor da aplicação.
 
-    apt install memcached
-    vim /etc/memcached.conf
-        I = 5M
-        -m 128
+```bash
+apt install memcached
+vim /etc/memcached.conf
+    I = 5M
+    -m 128
 
-    /etc/init.d/memcached restart
+/etc/init.d/memcached restart
+```
 
 ### Email
 
@@ -82,14 +86,19 @@ Deve apontar para a <pasta do projeto>/public, assim como qualquer projeto larav
 
 No Apache é possivel utilizar a extensão MPM-ITK (http://mpm-itk.sesse.net/) que permite rodar seu Servidor Virtual com usuário próprio. Isso facilita rodar o sistema como um usuário comum e não precisa ajustar as permissões da pasta storage/.
 
+```bash
 sudo apt install libapache2-mpm-itk
 sudo a2enmod mpm_itk
 sudo service apache2 restart
+```
+
 Dentro do seu virtualhost coloque
 
+```apache
 <IfModule mpm_itk_module>
 AssignUserId nome_do_usuario nome_do_grupo
 </IfModule>
+```
 
 ### Senha única
 
@@ -99,11 +108,11 @@ Cadastre uma nova URL no configurador de senha única utilizando o caminho https
 
 * DEV
 
-    php artisan migrate:fresh --seed
+    `php artisan migrate:fresh --seed`
 
 * Produção
 
-    php artisan migrate
+    `php artisan migrate`
 
 ### Supervisor (opcional)
 
@@ -146,3 +155,7 @@ Alguma dica de como resolver problemas comuns?
 
 Registre o log das principais alterações
 
+* 16/11/2022
+    - instalado `ybr-nx/laravel-mariadb`: permite utilizar json em mariadb de forma similar ao mysql
+    - instalado `spatie/commonmark-highlighter`
+    - helper `md2html($markdown)`
