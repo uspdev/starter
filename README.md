@@ -1,6 +1,7 @@
 # Starter
 
-* Esta aplicação já tem as bibliotecas USPDev pré configuradas
+Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
+
 * Inicio
 ```bash
     git clone git@github.com:uspdev/starter sua-aplicacao
@@ -16,10 +17,17 @@
     git remote add origin git@github.com:uspdev/sua-aplicacao
     git push -u origin main
 ```
-* Utilize o readme.md como exemplo
+* ajuste o `composer.json` com os dados da sua aplicação
+* Utilize o `readme.md` como exemplo
 * Remova o que for desnecessário
-* Verifique o .env.example
+* Ajuste o `.env.example`
 
+## Histórico
+
+* 16/11/2022
+    - instalado `ybr-nx/laravel-mariadb`: permite utilizar json em mariadb de forma similar ao mysql
+    - instalado `spatie/commonmark-highlighter`
+    - helper `md2html($markdown)`
 ---
 
 # Minha Aplicação
@@ -154,8 +162,3 @@ Alguma dica de como resolver problemas comuns?
 ## Histórico
 
 Registre o log das principais alterações
-
-* 16/11/2022
-    - instalado `ybr-nx/laravel-mariadb`: permite utilizar json em mariadb de forma similar ao mysql
-    - instalado `spatie/commonmark-highlighter`
-    - helper `md2html($markdown)`
