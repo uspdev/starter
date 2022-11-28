@@ -6212,28 +6212,27 @@
         },
         {
             "name": "uspdev/replicado",
-            "version": "1.16.0",
+            "version": "1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uspdev/replicado.git",
-                "reference": "ebcbdc5bcf50186bf913e478ae8d2816ee378e1b"
+                "reference": "cd7d9d1e033448ced12539c71d4bd215392cfb6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uspdev/replicado/zipball/ebcbdc5bcf50186bf913e478ae8d2816ee378e1b",
-                "reference": "ebcbdc5bcf50186bf913e478ae8d2816ee378e1b",
+                "url": "https://api.github.com/repos/uspdev/replicado/zipball/cd7d9d1e033448ced12539c71d4bd215392cfb6f",
+                "reference": "cd7d9d1e033448ced12539c71d4bd215392cfb6f",
                 "shasum": ""
             },
             "require": {
                 "ext-pdo_dblib": "*",
-                "illuminate/support": "^5 || ^6 || ^7 || ^8",
-                "monolog/monolog": "^1.25 || ^2",
+                "illuminate/collections": "^8 || ^9",
+                "monolog/monolog": "^2 || ^3",
                 "php": ">=7.0",
                 "uspdev/cache": "^1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0 || ^9.0",
-                "vlucas/phpdotenv": "^5.2"
+                "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "type": "library",
             "autoload": {
@@ -6256,9 +6255,9 @@
             "homepage": "https://github.com/uspdev/replicado",
             "support": {
                 "issues": "https://github.com/uspdev/replicado/issues",
-                "source": "https://github.com/uspdev/replicado/tree/1.16.0"
+                "source": "https://github.com/uspdev/replicado/tree/1.16.1"
             },
-            "time": "2022-11-28T18:49:32+00:00"
+            "time": "2022-11-28T19:29:13+00:00"
         },
         {
             "name": "uspdev/senhaunica-socialite",
