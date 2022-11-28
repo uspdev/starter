@@ -1,8 +1,18 @@
 {
-    "name": "laravel/laravel",
+    "name": "uspdev/starter",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Esqueleto para nova aplicação Uspdev",
+    "authors": [
+        {
+            "name": "Masaki Kawabata Neto",
+            "email": "kawabata@usp.br",
+            "homepage": "https://github.com/masakik"
+        }
+    ],
+    "keywords": [
+        "uspdev",
+        "starter"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -12,9 +22,9 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "spatie/commonmark-highlighter": "^3.0",
+        "uspdev/laravel-replicado": "^1.0",
         "uspdev/laravel-tools": "^1.1",
         "uspdev/laravel-usp-theme": "^2.6",
-        "uspdev/replicado": "^1.15",
         "uspdev/senhaunica-socialite": "^4.3",
         "ybr-nx/laravel-mariadb": "^1.0"
     },
