@@ -72,6 +72,9 @@ $right_menu = [
         'key' => 'senhaunica-socialite',
     ],
     [
+        'key' => 'laravel-tools',
+    ],
+    [
         'text' => '<i class="fas fa-cog"></i>',
         'title' => 'Configurações',
         'target' => '_blank',
@@ -86,7 +89,7 @@ return [
     # valor pode ser substituido pela aplicação.
     'title' => config('app.name'),
 
-    # USP_THEME_SKIN deve ser colocado no .env da aplicação 
+    # USP_THEME_SKIN deve ser colocado no .env da aplicação
     'skin' => env('USP_THEME_SKIN', 'uspdev'),
 
     # chave da sessão. Troque em caso de colisão com outra variável de sessão.
