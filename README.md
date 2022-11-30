@@ -50,10 +50,11 @@ O que é necessário para rodar esta aplicação
 
 Para receber as últimas atualizações do sistema rode:
 
-    git pull
-    composer install --no-dev
-    php artisan migrate
-
+```sh
+git pull
+composer install --no-dev
+php artisan migrate
+```
 
 
 ## Instalação
@@ -62,7 +63,7 @@ Para receber as últimas atualizações do sistema rode:
 
 ### Básico
 
-```bash
+```sh
 git clone git@github.com:uspdev/chamados
 composer install
 cp .env.example .env

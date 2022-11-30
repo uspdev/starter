@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69b73259956ad269231e023120e351ef",
+    "content-hash": "b0eb141035698bc27d42be0c39b38b56",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3406,6 +3406,69 @@
             "time": "2021-09-25T23:10:38+00:00"
         },
         {
+            "name": "rap2hpoutre/laravel-log-viewer",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
+                "reference": "52e7c703a1e83cdae450f406c7d8472332dfb34e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/52e7c703a1e83cdae450f406c7d8472332dfb34e",
+                "reference": "52e7c703a1e83cdae450f406c7d8472332dfb34e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.2.*|5.*|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.7.*|^7.0",
+                "phpunit/phpunit": "^7|^9.5.10"
+            },
+            "type": "laravel-package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Rap2hpoutre\\LaravelLogViewer\\": "src/"
+                },
+                "classmap": [
+                    "src/controllers"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rap2hpoutre",
+                    "email": "raphaelht@gmail.com"
+                }
+            ],
+            "description": "A Laravel log reader",
+            "keywords": [
+                "laravel",
+                "log",
+                "log-reader",
+                "log-viewer",
+                "logging",
+                "lumen"
+            ],
+            "support": {
+                "issues": "https://github.com/rap2hpoutre/laravel-log-viewer/issues",
+                "source": "https://github.com/rap2hpoutre/laravel-log-viewer/tree/v2.2.0"
+            },
+            "time": "2022-04-06T15:15:40+00:00"
+        },
+        {
             "name": "scrivo/highlight.php",
             "version": "v9.18.1.9",
             "source": {
@@ -6065,16 +6128,16 @@
         },
         {
             "name": "uspdev/laravel-replicado",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uspdev/laravel-replicado.git",
-                "reference": "8c965546b6f5679f8c9796449380b6561260f9ef"
+                "reference": "b72875ed8987c899d8ef39301f2ce1b95e467d47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uspdev/laravel-replicado/zipball/8c965546b6f5679f8c9796449380b6561260f9ef",
-                "reference": "8c965546b6f5679f8c9796449380b6561260f9ef",
+                "url": "https://api.github.com/repos/uspdev/laravel-replicado/zipball/b72875ed8987c899d8ef39301f2ce1b95e467d47",
+                "reference": "b72875ed8987c899d8ef39301f2ce1b95e467d47",
                 "shasum": ""
             },
             "require": {
@@ -6106,26 +6169,27 @@
             "description": "Wrapper laravel para uspdev/replicado",
             "support": {
                 "issues": "https://github.com/uspdev/laravel-replicado/issues",
-                "source": "https://github.com/uspdev/laravel-replicado/tree/1.0.0"
+                "source": "https://github.com/uspdev/laravel-replicado/tree/1.0.1"
             },
-            "time": "2022-11-28T18:53:43+00:00"
+            "time": "2022-11-30T17:32:40+00:00"
         },
         {
             "name": "uspdev/laravel-tools",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uspdev/laravel-tools.git",
-                "reference": "4d509a9df07817db5f5daf2cd2349c0d359d7f20"
+                "reference": "b36b72385a727f6ed3bd4cee42389524b1fe0afd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uspdev/laravel-tools/zipball/4d509a9df07817db5f5daf2cd2349c0d359d7f20",
-                "reference": "4d509a9df07817db5f5daf2cd2349c0d359d7f20",
+                "url": "https://api.github.com/repos/uspdev/laravel-tools/zipball/b36b72385a727f6ed3bd4cee42389524b1fe0afd",
+                "reference": "b36b72385a727f6ed3bd4cee42389524b1fe0afd",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3"
+                "php": "^7.3",
+                "rap2hpoutre/laravel-log-viewer": "^2.2"
             },
             "type": "library",
             "extra": {
@@ -6156,22 +6220,22 @@
             "description": "Coleção de ferramentas para incrementar o Laravel",
             "support": {
                 "issues": "https://github.com/uspdev/laravel-tools/issues",
-                "source": "https://github.com/uspdev/laravel-tools/tree/1.1.1"
+                "source": "https://github.com/uspdev/laravel-tools/tree/1.2.0"
             },
-            "time": "2022-11-28T19:39:01+00:00"
+            "time": "2022-11-29T20:45:01+00:00"
         },
         {
             "name": "uspdev/laravel-usp-theme",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uspdev/laravel-usp-theme.git",
-                "reference": "3caec6d7e000ca0706ee17b41c74e8b8c0ccf158"
+                "reference": "555b84d7c4af9c06fd585dcc49992e7c7d335cb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uspdev/laravel-usp-theme/zipball/3caec6d7e000ca0706ee17b41c74e8b8c0ccf158",
-                "reference": "3caec6d7e000ca0706ee17b41c74e8b8c0ccf158",
+                "url": "https://api.github.com/repos/uspdev/laravel-usp-theme/zipball/555b84d7c4af9c06fd585dcc49992e7c7d335cb9",
+                "reference": "555b84d7c4af9c06fd585dcc49992e7c7d335cb9",
                 "shasum": ""
             },
             "type": "library",
@@ -6206,9 +6270,9 @@
             "description": "usp theme for laravel",
             "support": {
                 "issues": "https://github.com/uspdev/laravel-usp-theme/issues",
-                "source": "https://github.com/uspdev/laravel-usp-theme/tree/2.6.0"
+                "source": "https://github.com/uspdev/laravel-usp-theme/tree/2.6.1"
             },
-            "time": "2022-10-28T17:11:28+00:00"
+            "time": "2022-11-30T17:39:32+00:00"
         },
         {
             "name": "uspdev/replicado",
