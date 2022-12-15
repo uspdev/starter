@@ -3,6 +3,7 @@
 Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
 
 * Inicio
+
 ```bash
     git clone git@github.com:uspdev/starter sua-aplicacao
     cd sua-aplicacao
@@ -11,12 +12,15 @@ Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
     php artisan key:generate
     php artisan migrate
 ```
+
 * Crie seu repositório remoto e faça as seguintes configurações
+
 ```bash
     git remote remove origin
     git remote add origin git@github.com:uspdev/sua-aplicacao
     git push -u origin main
 ```
+
 * ajuste o `composer.json` com os dados da sua aplicação
 * Utilize o `readme.md` como exemplo
 * Remova o que for desnecessário
