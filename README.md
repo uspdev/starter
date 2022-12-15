@@ -22,7 +22,14 @@ Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
 * Remova o que for desnecessário
 * Ajuste o `.env.example`
 
+## Testes
+
+    php artisan dusk
+
 ## Histórico
+
+* 15/12/2022
+    - instalado `laravel/dusk`: teste de navegador com testes basicos.
 
 * 16/11/2022
     - instalado `ybr-nx/laravel-mariadb`: permite utilizar json em mariadb de forma similar ao mysql
