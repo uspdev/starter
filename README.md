@@ -26,6 +26,9 @@ Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
 * Remova o que for desnecessário
 * Ajuste o `.env.example`
 
+OBS.: Caso não vá utilizar alguma biblioteca instalada, além de remover do composer.json
+verifique a necessidade de ajustes no `.env.example`. 
+
 ## Testes
 
     php artisan dusk
