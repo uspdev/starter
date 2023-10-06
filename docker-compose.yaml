@@ -41,10 +41,26 @@ services:
       dockerfile: ./docker-compose/Dockerfile-php
     depends_on:
       - mariadbserver
+    env_file:
+      - .env.docker
     container_name: app
     ports:
       - 8000:8000
     networks:
       net-uspdev-app:
         ipv4_address: 10.10.0.12
+    restart: always
+
+  replicado:
+    build:
+      context: .
+      dockerfile: ./docker-compose/Dockerfile-replicado
+    env_file:
+      - .env.docker
+    container_name: replicado
+    ports:
+      - 5000:5000
+    networks:
+      net-uspdev-app:
+        ipv4_address: 10.10.0.13
     restart: always
