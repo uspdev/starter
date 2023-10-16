@@ -10,6 +10,7 @@ Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
     composer install
     cp .env.example .env
     php artisan key:generate
+    # ajuste o diretório do banco de dados no .env
     php artisan migrate
 ```
 
@@ -34,6 +35,8 @@ verifique a necessidade de ajustes no `.env.example`.
     php artisan dusk
 
 ## Histórico
+* 16/10/2023
+    - versão com docker
 
 * 15/12/2022
     - instalado `laravel/dusk`: teste de navegador com testes basicos.
@@ -85,6 +88,27 @@ php artisan key:generate
 ```
 
 Configure o .env conforme a necessidade
+
+### Docker
+
+#### faker
+```sh
+# montar a build do senhaunica-faker (por ora com o nome de faker)
+# clonar o faker, ir para o diretório e:
+docker build -t faker .
+```
+
+#### DNS
+  - ajustar seu DNS para o IP de gateway do docker
+  - exemplo para /etc/resolv.conf: `nameserver 172.17.0.1`
+
+#### rodando de fato
+```sh
+docker-compose up
+# pode ser necessário matar e rodar de novo caso o mariadb demore a subir
+```
+
+O starter ficará acessível no endereço: http://starter.uspdev.docker:8000
 
 ### Cache (opcional)
 
