@@ -7,7 +7,6 @@ fi
 echo PORT $PORT
 echo APP_URL $APP_URL
 
-cp .env.example .env
 php artisan key:generate
 php artisan config:cache
 php artisan migrate:fresh
