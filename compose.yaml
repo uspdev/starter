@@ -20,8 +20,10 @@ services:
             - DNSDOCK_NAME=starter
             - DNSDOCK_IMAGE=uspdev
         depends_on:
-            - mariadb
-            - senhaunica
+            mariadb:
+                condition: service_healthy
+            senhaunica:
+                condition: service_started
     mariadb:
         image: mariadb
         environment:
@@ -29,6 +31,10 @@ services:
             - MARIADB_ROOT_PASSWORD=alfafa
             - DNSDOCK_NAME=mariadb
             - DNSDOCK_IMAGE=uspdev
+        healthcheck:
+            test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+            interval: 5s
+            timeout: 10s
     senhaunica:
         image: faker
         environment:
