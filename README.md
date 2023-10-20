@@ -102,7 +102,7 @@ docker build -t faker .
   - ajustar seu DNS para o IP de gateway do docker
   - exemplo para /etc/resolv.conf: `nameserver 172.17.0.1`
 
-#### rodando de fato
+#### rodando com o docker-compose
 ```sh
 docker-compose up
 
@@ -114,6 +114,18 @@ docker-compose exec starter php artisan key:generate --show
 ```
 
 O starter ficará acessível no endereço: http://starter.uspdev.docker
+
+#### rodando no braço
+```sh
+# é suposto que o container do senhaunica-faker já está rodando com o IP 172.17.0.2
+# deve ser algo como: docker run --rm --name faker faker
+
+# build
+docker build -t starter .
+
+# rodar
+docker run --rm --name starter --env APP_URL="http://172.17.0.3" --env APP_KEY="base64:GxYhpi/9ys3LHRkXI7+kdf6QuOpt5zmutON2Z2//CgI=" --env SENHAUNICA_DEV="http://172.17.0.2/wsusuario/oauth" starter
+```
 
 ### Cache (opcional)
 
