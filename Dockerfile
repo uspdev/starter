@@ -1,7 +1,4 @@
-FROM php:8.2
-
-ARG PORT
-ENV PORT 8000
+FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
     freetds-bin \
@@ -23,12 +20,17 @@ RUN docker-php-ext-install \
     pdo_mysql \
     zip
 
-WORKDIR /var/www
+# laravel
 COPY . .
-# workaround uspdev/replicado
-RUN cp .env.example .env
+RUN chown -R www-data: /var/www
+RUN a2enmod rewrite
+RUN sed -i 's|/var/www/html|/var/www/html/public|' /etc/apache2/sites-available/000-default.conf
+
+USER www-data
 RUN composer install --no-interaction --no-dev
-ENTRYPOINT ./serve.sh
+
+CMD ["./serve.sh"]
 
 # fonte:
 # [1] https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-22-04
+# [2] https://github.com/docker-library/php

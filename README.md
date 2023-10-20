@@ -105,10 +105,15 @@ docker build -t faker .
 #### rodando de fato
 ```sh
 docker-compose up
-# pode ser necessário matar e rodar de novo caso o mariadb demore a subir
+
+# pode ser interessante rodar as migrations
+docker-compose exec starter php artisan migrate
+
+# é bom atualizar a APP_KEY e substituir no compose.yaml
+docker-compose exec starter php artisan key:generate --show
 ```
 
-O starter ficará acessível no endereço: http://starter.uspdev.docker:8000
+O starter ficará acessível no endereço: http://starter.uspdev.docker
 
 ### Cache (opcional)
 

@@ -10,8 +10,9 @@ services:
     starter:
         build: .
         environment:
-            - APP_URL=http://starter.uspdev.docker:8000
-            - SENHAUNICA_DEV="http://senhaunica.uspdev.docker:8000/wsusuario/oauth"
+            - APP_URL=http://starter.uspdev.docker
+            - APP_KEY=base64:GxYhpi/9ys3LHRkXI7+kdf6QuOpt5zmutON2Z2//CgI=
+            - SENHAUNICA_DEV="http://senhaunica.uspdev.docker/wsusuario/oauth"
             - DB_CONNECTION=mariadb
             - DB_HOST=mariadb.uspdev.docker
             - DB_DATABASE=starter
@@ -38,6 +39,6 @@ services:
     senhaunica:
         image: faker
         environment:
-            - APP_URL=http://senhaunica.uspdev.docker:8000
+            - APP_URL=http://senhaunica.uspdev.docker
             - DNSDOCK_NAME=senhaunica
             - DNSDOCK_IMAGE=uspdev
