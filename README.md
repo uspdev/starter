@@ -10,6 +10,7 @@ Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
     composer install
     cp .env.example .env
     php artisan key:generate
+    # ajuste o diretório do banco de dados no .env
     php artisan migrate
 ```
 
@@ -46,6 +47,8 @@ Após criar e entrar com uma conta na plataforma, é possível gerar as credenci
 Assim, basta substituir tais credenciais no `.env` do projeto e enviar os e-mails normalmente que estes serão capturados na caixa de entrada do Mailtrap, sem serem enviados aos seus destinatários.
 
 ## Histórico
+* 16/10/2023
+    - versão com docker
 
 * 15/12/2022
     - instalado `laravel/dusk`: teste de navegador com testes basicos.
@@ -97,6 +100,44 @@ php artisan key:generate
 ```
 
 Configure o .env conforme a necessidade
+
+### Docker
+
+#### faker
+```sh
+# montar a build do senhaunica-faker (por ora com o nome de faker)
+# clonar o faker, ir para o diretório e:
+docker build -t faker .
+```
+
+#### DNS
+  - ajustar seu DNS para o IP de gateway do docker
+  - exemplo para /etc/resolv.conf: `nameserver 172.17.0.1`
+
+#### rodando com o docker-compose
+```sh
+docker-compose up
+
+# pode ser interessante rodar as migrations
+docker-compose exec starter php artisan migrate
+
+# é bom atualizar a APP_KEY e substituir no compose.yaml
+docker-compose exec starter php artisan key:generate --show
+```
+
+O starter ficará acessível no endereço: http://starter.uspdev.docker
+
+#### rodando no braço
+```sh
+# é suposto que o container do senhaunica-faker já está rodando com o IP 172.17.0.2
+# deve ser algo como: docker run --rm --name faker faker
+
+# build
+docker build -t starter .
+
+# rodar
+docker run --rm --name starter --env APP_URL="http://172.17.0.3" --env APP_KEY="base64:GxYhpi/9ys3LHRkXI7+kdf6QuOpt5zmutON2Z2//CgI=" --env SENHAUNICA_DEV="http://172.17.0.2/wsusuario/oauth" starter
+```
 
 ### Cache (opcional)
 

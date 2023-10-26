@@ -23,7 +23,7 @@
         "laravel/tinker": "^2.5",
         "spatie/commonmark-highlighter": "^3.0",
         "uspdev/laravel-replicado": "^1.0",
-        "uspdev/laravel-tools": "^1.2",
+        "uspdev/laravel-tools": "^1.3.2",
         "uspdev/laravel-usp-theme": "^2.7",
         "uspdev/senhaunica-socialite": "^4.3",
         "ybr-nx/laravel-mariadb": "^1.0"
