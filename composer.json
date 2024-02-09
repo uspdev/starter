@@ -25,8 +25,7 @@
         "uspdev/laravel-replicado": "^1.0",
         "uspdev/laravel-tools": "^1.2",
         "uspdev/laravel-usp-theme": "^2.7",
-        "uspdev/senhaunica-socialite": "^4.3",
-        "ybr-nx/laravel-mariadb": "^1.0"
+        "uspdev/senhaunica-socialite": "^4.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
