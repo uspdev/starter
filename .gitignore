@@ -16,3 +16,6 @@ yarn-error.log
 /.vscode
 
 public/vendor
+
+.lando.yml
+Dockerfile.custom
