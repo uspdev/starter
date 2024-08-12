@@ -1,13 +1,26 @@
-# Starter
+# Starter versão 2
 
-Esta aplicação já tem as principais bibliotecas USPDev pré configuradas.
+Aplicação esqueleto para novos projetos utilizando Laravel 11.
+
+Para utilizar Laravel 8, veja a versão 1.
+
+-----------------
+
+Esta aplicação é um esqueleto que já tem as principais bibliotecas USPDev pré configuradas:
+
+    "uspdev/laravel-replicado": "^1.0"
+    "uspdev/laravel-tools": "^1.2"
+    "uspdev/laravel-usp-theme": "^2.7"
+    "uspdev/senhaunica-socialite": "^4.3"
+    
+## Instalação
 
 * Inicio
 
 ```bash
     git clone git@github.com:uspdev/starter sua-aplicacao
     cd sua-aplicacao
-    composer install
+    composer update
     cp .env.example .env
     php artisan key:generate
     php artisan migrate
@@ -47,9 +60,12 @@ Assim, basta substituir tais credenciais no `.env` do projeto e enviar os e-mail
 
 ## Histórico
 
+* 9/08/2024
+    - Versão 2, atualizado para laravel 11 e PHP 8.2.
+    
 * 15/12/2022
     - instalado `laravel/dusk`: teste de navegador com testes basicos.
-
+    
 * 16/11/2022
     - instalado `ybr-nx/laravel-mariadb`: permite utilizar json em mariadb de forma similar ao mysql
     - instalado `spatie/commonmark-highlighter`
