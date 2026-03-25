@@ -75,5 +75,11 @@ return [
     // relevante se permission=true
     'codigoUnidade' => env('SENHAUNICA_CODIGO_UNIDADE'),
 
+    // se true, desabilita a funcionalidade de assumir identidade (login as)
+    'disableLoginas' => env('SENHAUNICA_DISABLE_LOGINAS', false),
+
+    // se true, persiste a sessão entre acessos
+    'rememberSession' => env('SENHAUNICA_REMEMBER_SESSION', true),
+
     // SENHAUNICA_KEY e SENHAUNICA_SECRET são carregados em services.php da biblioteca
 ];
