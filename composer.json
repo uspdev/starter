@@ -31,7 +31,7 @@
         "fakerphp/faker": "^1.9.1",
         "laravel/dusk": "^8.0",
         "laravel/sail": "^1.0.1",
-        "lucascudo/laravel-pt-br-localization": "^1.2",
+        "lucascudo/laravel-pt-br-localization": "^3",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^8.1",
         "phpunit/phpunit": "^11.0"
