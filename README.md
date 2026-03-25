@@ -1,6 +1,6 @@
 # Starter versão 2
 
-Aplicação esqueleto para novos projetos utilizando Laravel 11.
+Aplicação esqueleto para novos projetos utilizando Laravel 12.
 
 Para utilizar Laravel 8, veja a versão 1.
 
@@ -9,8 +9,8 @@ Para utilizar Laravel 8, veja a versão 1.
 Esta aplicação é um esqueleto que já tem as principais bibliotecas USPDev pré configuradas:
 
     "uspdev/laravel-replicado": "^1.0"
-    "uspdev/laravel-tools": "^1.2"
-    "uspdev/laravel-usp-theme": "^2.7"
+    "uspdev/laravel-tools": "^1.6"
+    "uspdev/laravel-usp-theme": "^2.8"
     "uspdev/senhaunica-socialite": "^4.3"
     
 ## Instalação
@@ -23,6 +23,12 @@ Esta aplicação é um esqueleto que já tem as principais bibliotecas USPDev pr
     composer update
     cp .env.example .env
     php artisan key:generate
+
+```
+
+* Ajustes o .env, incluindo banco de dados
+
+```bash
     php artisan migrate
 ```
 
@@ -59,6 +65,9 @@ Após criar e entrar com uma conta na plataforma, é possível gerar as credenci
 Assim, basta substituir tais credenciais no `.env` do projeto e enviar os e-mails normalmente que estes serão capturados na caixa de entrada do Mailtrap, sem serem enviados aos seus destinatários.
 
 ## Histórico
+
+* 25/03/2026
+    - Versão 3, atualizado para laravel 12.
 
 * 9/08/2024
     - Versão 2, atualizado para laravel 11 e PHP 8.2.

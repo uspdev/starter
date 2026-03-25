@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+    dnsdock:
+        image: aacebedo/dnsdock:latest-amd64
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - 172.17.0.1:53:53/udp
+    starter:
+        build: .
+        environment:
+            - APP_URL=http://starter.uspdev.docker
+            - APP_KEY=base64:GxYhpi/9ys3LHRkXI7+kdf6QuOpt5zmutON2Z2//CgI=
+            - SENHAUNICA_DEV="http://senhaunica.uspdev.docker/wsusuario/oauth"
+            - DB_CONNECTION=mariadb
+            - DB_HOST=mariadb.uspdev.docker
+            - DB_DATABASE=starter
+            - DB_USERNAME=root
+            - DB_PASSWORD=alfafa
+            - DNSDOCK_NAME=starter
+            - DNSDOCK_IMAGE=uspdev
+        depends_on:
+            mariadb:
+                condition: service_healthy
+            senhaunica:
+                condition: service_started
+    mariadb:
+        image: mariadb
+        environment:
+            - MARIADB_DATABASE=starter
+            - MARIADB_ROOT_PASSWORD=alfafa
+            - DNSDOCK_NAME=mariadb
+            - DNSDOCK_IMAGE=uspdev
+        healthcheck:
+            test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+            interval: 5s
+            timeout: 10s
+    senhaunica:
+        image: faker
+        environment:
+            - APP_URL=http://senhaunica.uspdev.docker
+            - DNSDOCK_NAME=senhaunica
+            - DNSDOCK_IMAGE=uspdev
