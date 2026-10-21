@@ -22,7 +22,7 @@
         "laravel/tinker": "^3.0",
         "spatie/commonmark-highlighter": "^3.0",
         "uspdev/laravel-replicado": "^1.0",
-        "uspdev/laravel-tools": "^3.0",
+        "uspdev/laravel-tools": "^1.6",
         "uspdev/laravel-usp-theme": "^2.8",
         "uspdev/senhaunica-socialite": "^4.5",
         "uspdev/wsfoto": "^2.0"
